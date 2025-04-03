@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header">Angular</div>
+    <div class="card-body">
+      <p>Otwarty framework i platforma do tworzenia SPA, napisany w języku TypeScript i wspierany oraz rozwijany przez
+        Google. Angular początkowo miał być wersją drugą frameworka AngularJS, jednak decyzje projektowe sprawiły,
+        że Google zdecydował się wydać go jako osobny produkt, m.in. ze względu na brak kompatybilności wstecznej
+        oraz prostej ścieżki aktualizacji aplikacji napisanych w AngularJS do Angulara 2. Angular wydany jest na
+        licencji MIT.</p>
+    </div>
+  </div>
+  
+  <!-- Zestawienie frameworków -->
+  <div class="card mt-4">
+    <div class="card-header">Popularne Frameworki</div>
+    <div class="card-body">
+      <!-- Wyświetlanie danych z tablicy frameworks z warunkiem na podstawie roku powstania -->
+      <ul>
+        @for(f of frameworks; track $index) {
+          <li>
+            @if(f.year < 2014) {
+              <div class="red">
+                {{ f.name }} - Rok powstania: {{ f.year }}, Twórca: {{ f.creator }}
+              </div>
+            }
+            @else {
+              <div class="green">
+                {{ f.name }} - Rok powstania: {{ f.year }}, Twórca: {{ f.creator }}
+              </div>
+            }
+          </li>
+        }
+      </ul>
+      <p>Kolorem czerwonym oznaczone te, które powstały przed 2014 rokiem, a pozostałem na zielono</p>
+    </div>
+  </div>
+  
